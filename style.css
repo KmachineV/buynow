@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo:wght@700&family=Poppins:wght@500;700&display=swap');
+
+:root {
+  --arvo: 'Arvo', serif;
+  --poppins: 'Poppins', sans-serif;
+  --orange-crayola: #FF7843;
+  --mountain-meadow: #24BC94;
+  --bottle-green: #14664F;
+  --old-lace: #F4EFE1;
+  --gris-menu: #B1B1B1;
+  --text: #4D4D4D;
+  --text-secundario: #666666;
+  --borde-flecha: #D9D9D9;
+  --fondo: #F7F7F7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fondo);
+  font-family: var(--poppins);
+}
+
+.section__notification {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+  background-color: var(--orange-crayola);
+  color: #fff;
+  font-weight: 500;
+  align-items: center;
+}
+
+.notification__icons{ 
+  width: max-content;
+  overflow: hidden;
+  display: flex;
+  gap: 5px;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+}
+
+.notification__icon--facebook {
+  background-image: url('/material/icon-facebook.svg');
+}
+
+.notification__icon--instagram {
+  background-image: url('/material/icon-instagram.svg');
+}
+
+.header__navigation {
+  width: 100%;
+  height: max-content;
+  border-bottom: 1px solid var(--mountain-meadow);
+}
+
+.header__logotipos {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  margin: auto;
+}
+
+.header__search {
+  display: flex;
+  border: 2px solid var(--gris-menu);
+  border-radius: 12px;
+  padding: 3px 5px;
+  gap: 5px;
+}
+
+.icon--search {
+  background-image: url('/material/icon-search.svg');
+}
+
+.header__input {
+  border: none;
+  outline: none;
+  font-family: var(--poppins);
+  color: var(--text-secundario);
+}
+
+.header__input::placeholder {
+  color: var(--borde-flecha);
+}
+
+.header__logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+}
+
+.header__icons {
+  width: max-content;
+  display: flex;
+  gap: 10px;
+}
+
+
+.icon--email {
+  background-image: url('/material/icon-email.svg');
+}
+
+.icon--cart {
+  background-image: url('/material/icon-cart.svg');
+}
+
+.nav {
+  width: 70%;
+  margin: 10px auto 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: space-evenly;
+  color: var(--text-secundario);
+  cursor: pointer;
+}
+
+.nav-list li:hover {
+  border-bottom: 2px solid var(--mountain-meadow);
+  color: var(--mountain-meadow);
+}
+
+
+.nav-list li {
+  list-style: none;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav__icon--size {
+  width: 40px;
+  height: 40px;
+  background-position: center;
+  background-size: contain;
+}
+
+.icon-herramienta {
+  background-image: url('/material/menu/icon-herramientas.svg');
+  color: #24BC94;
+}
+
+.icon-repuestos {
+  background-image: url('/material/menu/icon-repuesto.svg');
+}
+
+.icon-construccion {
+  background-image: url('/material/menu/icon-construccion.svg');
+}
+
+.icon-electrodomesticos {
+  background-image: url('/material/menu/icon-electro.svg');
+}
+
+.icon-tecnologia {
+  background-image: url('/material/menu/icon-tecno.svg');
+}
+
+.icon-hogar {
+  background-image: url('/material/menu/icon-hogar.svg');
+}
+
+.icon-sale {
+  background-image: url('/material/menu/icon-sale.svg');
+}

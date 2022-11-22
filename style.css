@@ -263,6 +263,7 @@ body {
   flex-direction: column;
   border: 1px solid var(--borde-flecha);
   background-color: #fff;
+  cursor: pointer;
 }
 
 .card__product:hover {
@@ -327,6 +328,13 @@ body {
   background-image: url('/material/arrow-right.svg');
 }
 
+.section__footer {
+  margin: 80px auto 0;
+  width: 90%;
+  border-bottom: 1px solid var(--borde-flecha);
+  padding: 0.1px;
+}
+
 
 .time {
   width: 100%;
@@ -364,4 +372,123 @@ body {
   margin-top: 30px;
   font-weight: bold;
   font-size: 2.5rem;
+}
+
+.multimedia {
+  display: grid;
+  place-content: center;
+  padding: 80px 0;
+}
+
+.informative {
+  margin-top: 30px;
+  width: 100%;
+  height: max-content;
+}
+
+.informative__grid {
+  margin: 0 auto;
+  padding-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  gap: 10px;
+}
+
+.informative__card {
+  display: grid;
+  grid-template-rows: max-content minmax(60px, 1fr) min-content;
+  text-align: center;
+}
+
+.informative__card h4 {
+  color: #24BC94;
+  font-size: 1.3rem;
+  padding: 20px;
+}
+
+.informative__card p {
+  padding: 0 20px;
+  color: var(--text-secundario);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+.social__media {
+  margin-top: 80px;
+}
+
+.social__media__title {
+  text-align: center;
+  color: #24BC94;
+}
+
+.social__media__title h5{
+  font-size: 2rem;
+  padding: 20px 0;
+}
+
+.media__gallery {
+  width: 80%;
+  margin: 0 auto 100px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 500px);
+  gap: 20px;
+}
+
+.gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.register {
+  background-color: var(--old-lace);
+  width: 100%;
+  text-align: center;
+  padding: 60px;
+}
+
+.form__title {
+  color: var(--orange-crayola);
+  font-weight: bold;
+  font-size: 2.5rem;
+  font-family: var(--poppins);
+}
+
+.form__paragraph {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: var(--text);
+  font-family: var(--poppins);
+  font-weight: 500;
+  margin: 10px 0 20px;
+}
+
+.form__cta {
+  width: 50%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.form__input {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  font-family: var(--poppins);
+  outline: none;
+}
+
+.form__button {
+  font-family: var(--poppins);
+  padding: 10px;
+  border: none;
+  width: 16em;
+  background-color: var(--mountain-meadow);
+  color: #fff;
+  font-size: 1.2rem;
 }

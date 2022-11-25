@@ -105,6 +105,7 @@ body {
   width: max-content;
   display: flex;
   gap: 10px;
+  align-items: center;
 }
 
 
@@ -116,9 +117,32 @@ body {
   background-image: url('/material/icon-cart.svg');
 }
 
+
 .nav {
   width: 70%;
   margin: 10px auto 0;
+}
+
+.sidebar {
+  display: none;
+}
+
+.nav__icon {
+  display: none;
+}
+
+@media (max-width: 450px) {
+  .section__notification {
+    justify-content: flex-end;
+  }
+
+  .notification__texts {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
+  }
 }
 
 .nav-list {
@@ -645,4 +669,77 @@ body {
 .payment__pictures img{
   width: 60px;
   height: 60px;
+}
+
+@media (max-width: 780px) {
+  .header__logo {
+    grid-template-columns: 1fr;
+  }
+
+  .header__input {
+    width: 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .nav {
+    display: none;
+  }
+
+  .icon--email, .icon--cart {
+    display: none;
+  }
+
+  .nav__checkbox {
+    display: none;
+  }
+
+  .nav__icon {
+    display: block;
+    cursor: pointer;
+  }
+ 
+  .nav__img {
+    display: block;
+  }
+  
+  .nav__link {
+    list-style: none;
+    color: var(--text-secundario);
+  }
+
+  :checked + .nav__items {
+    transform: translate(0);
+  }
+
+  .sidebar {
+    display: flex;
+    justify-content: flex-end;
+    width: 90%;
+    align-items: center;
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  .nav__items {
+    position: absolute;
+    top: calc(29.6% - 150px);
+    right: 0;
+    background: var(--fondo);
+    width: 60%;
+    max-width: 400px;
+    height: calc(80% - 100px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translate(100%);
+    transition: transform .4s;
+    box-shadow: -6px 10px 20px rgba(0, 0, 0, .5);
+    border-bottom-left-radius: 8px;
+  }
+
+  .section__notification{
+    padding: 10px 20px;
+  }
 }

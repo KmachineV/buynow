@@ -27,6 +27,7 @@ body {
 
 .section__notification {
   width: 100%;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   padding: 10px 50px;
@@ -127,22 +128,12 @@ body {
   display: none;
 }
 
-.nav__icon {
+.nav__items {
   display: none;
 }
 
-@media (max-width: 450px) {
-  .section__notification {
-    justify-content: flex-end;
-  }
-
-  .notification__texts {
-    display: none;
-  }
-
-  .header__search {
-    display: none;
-  }
+.nav__icon {
+  display: none;
 }
 
 .nav-list {
@@ -253,7 +244,7 @@ body {
 
 .popular__products {
   width: 100%;
-  height: 650px;
+  height: 600px;
 }
 
 .popular__texts {
@@ -427,6 +418,17 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
+}
+
+.container__iframe {
+  width: 800px;
+  height: 500px;
+}
+
+
+.container__iframe iframe {
+	width: 100%;
+  height: 100%;
 }
 
 .informative {
@@ -671,6 +673,55 @@ body {
   height: 60px;
 }
 
+@media (max-width: 980px) {
+  .cards__products {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .icon__arrow--left, .icon__arrow--right {
+    display: none;
+  }
+
+  .categories__container {
+    margin: 0 auto;
+  }
+
+  .categories__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+  }
+
+  .brands__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 800px) {
+  .cards__products {
+    overflow-x: scroll;
+    scroll-margin: 2em;
+    place-content: initial;
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .card__texts {
+    padding: 10px 25px;
+  }
+
+  .card__product {
+    width: 250px;
+  }
+
+  .container__iframe {
+    width: 500px;
+    height: 300px;
+  }
+}
+
 @media (max-width: 780px) {
   .header__logo {
     grid-template-columns: 1fr;
@@ -679,11 +730,43 @@ body {
   .header__input {
     width: 100px;
   }
+
+  .time__title__container {
+    padding: 10px;
+  }
+
+  .time__title {
+    font-size: 2rem;
+  }
+
+  .time__texts{
+    padding: 0 10px 40px;
+  }
+  
+  .time__date time {
+    font-size: 6rem;
+  }
+
+  .time__date span {
+    font-size: 1.3rem;
+  }
+
+  .time__paragrah--font__family {
+    font-size: 4rem;
+  }
+
+  .time__paragrah:nth-child(4) {
+    font-size: 1.2rem;
+  }
 }
 
 @media (max-width: 650px) {
   .nav {
     display: none;
+  }
+
+  .header__logotipos {
+    height: 80px;
   }
 
   .icon--email, .icon--cart {
@@ -723,7 +806,7 @@ body {
 
   .nav__items {
     position: absolute;
-    top: calc(29.6% - 150px);
+    top: 121px;
     right: 0;
     background: var(--fondo);
     width: 60%;
@@ -741,5 +824,127 @@ body {
 
   .section__notification{
     padding: 10px 20px;
+  }
+
+  .time__paragrah:nth-child(2) {
+    font-size: 2rem;
+  }
+
+  .container__iframe {
+    width: 450px;
+    height: 270px;
+  }
+
+  .categories__title {
+    padding: 0 10px 25px;
+  }
+
+  .brands__title {
+    padding: 0;
+  }
+
+  .brands__images {
+    grid-template-columns: 1fr;
+  }
+
+  .brands__picture {
+    display: grid;
+    place-content: center;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .section__notification {
+    justify-content: flex-end;
+  }
+
+  .notification__texts {
+    display: none;
+  }
+
+  .header__search {
+    display: none;
+  }
+
+  .card__amount {
+    font-size: 1rem;
+  }
+
+  .time__texts {
+    padding: 0 10px 10px;
+  }
+
+  .time__title {
+    font-size: 1.2rem;
+  }
+
+  .time__date {
+    margin-top: 5px;
+  }
+
+  .time__date time {
+    font-size: 3rem;
+  }
+
+  .time__date span {
+    margin-top: -15px;
+    font-size: .63rem;
+  }
+
+  .time__paragrah:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
+  .time__paragrah:nth-child(4) {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: .95rem;
+  }
+
+  .container__iframe {
+    width: 290px;
+    height: 180px;
+  }
+
+  .categories__container {
+    width: 95%;
+  }
+
+  .categories__images {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .categories__title {
+    padding: 0;
+    padding-bottom: 20px;
+  }
+
+  .categories__title h5 {
+    font-size: 1.3rem;
+  }
+
+  .picutre__subtitle {
+    font-size: .8rem;
+  }
+
+  .brands__containers {
+    padding-top: 10px;
+  }
+
+  .brands__title h5{
+    font-size: 1.5rem;
+  }
+
+  .brands__picture img {
+    height: 120px;
+  }
+
+  .section__footer {
+    margin: 70px auto 0;
+  }
+
+  .section__footer--margin {
+    margin: 50px auto 0;
   }
 }

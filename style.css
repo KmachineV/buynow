@@ -262,8 +262,7 @@ body {
 }
 
 .cards__products {
-  margin: 0 auto;
-  margin-top: 20px;
+  margin: 20px auto;
   width: 90%;
   display: grid;
   grid-template-columns: 100px 1fr 1fr 1fr 1fr 100px;
@@ -500,11 +499,17 @@ body {
 
 .brands__images {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: auto 1fr 1fr 1fr 1fr 1fr auto;
+}
+
+.brands__picture {
+  width: 100%;
+  height: 100%;
 }
 
 .brands__picture img {
-  height: 140px;
+  width: 100%;
+  height: 100%;
 }
 
 .social__media {
@@ -642,6 +647,7 @@ body {
   margin: auto;
   justify-content: flex-start;
   gap: 25%;
+  flex-wrap: wrap;
 }
 
 .about__list {
@@ -869,6 +875,15 @@ body {
   .informative__card p {
     padding: 0;
   }
+
+  .footer__about {
+    justify-content: center;
+  }
+
+  .about__list {
+   margin-bottom: 30px;
+   width: 200px;
+  }
 }
 
 
@@ -1012,15 +1027,6 @@ body {
     margin: 0 auto;
     font-size: 1.8rem;
     flex-wrap: wrap;
-  }
-
-  .footer__about {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-
-  .about__list {
-   margin-bottom: 30px;
   }
 
   .payment__pictures {
